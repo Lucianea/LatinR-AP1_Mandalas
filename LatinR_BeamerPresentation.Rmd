@@ -1,9 +1,9 @@
 ---
 title: "Mandalas"
 subtitle: "<br/>  uma Abordagem para Desenvolver Habilidades Humanas com R"
-author: "Prof Dr Luciane, Prof. Dr. João Paulo"
-institute: "Academia da Força Aérea"
-date: "02 de agosto de 2023"
+author: "Prof Dr Luciane, Prof. Dr. João Paulo, Prof. Dr. Orlando e Prof. Dr. Orlando"
+institute: "Academia da Força Aérea/ Universidade Federal Fluminense"
+date: "outubro de 2023"
 header-includes:
   - \pgfdeclareimage[height=.75cm]{logoAFA}{afa.jpg}
   - \logo{\pgfuseimage{logoAFA}}
@@ -43,7 +43,7 @@ file
 
 # Resumo
 
-* Introdução
+* Introducción
     * R
     * Mandalas
     * E-book
@@ -53,9 +53,6 @@ file
     * Cores I   - alguns exemplos
 * Considerações finais
   
-
-# Introdução
-* Algum texto
 
 # Mandalas com R: livro
 
@@ -69,26 +66,44 @@ knitr::include_graphics(paste(file,"FigLivro01.png",sep="/"))
 knitr::include_graphics(paste(file,"FigLivro01.png",sep="/"))
 ```
 
-# Elementos iniciais
+# Introducción
+* Valores Humanos: respeto a la diversidad cultural.
+* Habilidades Humanas: creatividad, concentración, razonamiento lógico
+* Actividades que incluyen R
+* Mándalas
 
-* Instalação dos pacotes: **ggplot2** e **mandalaR**
+# Objetivo
+
+* Estimular el aprendizaje y uso del lenguaje R de manera
+innovador
+
+\textrm{\large{R + Matemáticas + Arte = Mándalas}}
+
+# Paquetes Requeridos para la Actividad
+
+*  **ggplot2** y **mandalaR**
 
 ```{r,eval=FALSE,echo=TRUE}
     install.packages("MandalaR")
     install.packages("ggplot2")
 ```
+# Explorando conceptos matemáticos - 1
 
-* Circunferência
-  * Curva fundamental e conhecida da história da humanidade
-  * Propriedades fundamentais para a invenção da roda. 
-  * Antiga: escriba de Ahmes $\pi\approx 3.16$.
-  * Fundamental para o estudo das curvas clássicas. 
-  * Equação paramétrica:
+\begin{minipage}{\textwidth}
+\begin{minipage}{.75\textwidth}
+* Circunferencia
+  *Fundamental para el estudio de curvas clásicas.
+  * Ecuación paramétrica:
     * $x=r\cos(\theta)$
     * $y=r\sin(\theta)$
     * $\theta\in [0,2\pi]$
+\end{minipage}
+\begin{minipage}{.25\textwidth}
+Circunferencia como figura do kntr
+\end{minipage}
+\end{minipage}
 
-# Circunferência: código R
+# Circunferencia: código R
 
 ```{r,echo=TRUE,eval=TRUE}
     require(ggplot2)
@@ -105,11 +120,51 @@ knitr::include_graphics(paste(file,"FigLivro01.png",sep="/"))
 
 ```
 
-# Visualização
+# Visualización
 
 ```{r,echo=T,out.width=250,fig.align='center'}
 p
 ```
+
+# Explorando conceptos matemáticos -2
+
+\begin{minipage}{\textwidth}
+\begin{minipage}{.75\textwidth}
+* Astróide
+  * Curva menos conhecida
+  * Equação paramétrica:
+    * $x=a\cos^3(\theta)$
+    * $y=a\sin^3(\theta)$
+    * $\theta\in [0,2\pi]$
+\end{minipage}
+\begin{minipage}{.25\textwidth}
+Astroide como figura do kntr
+\end{minipage}
+\end{minipage}
+
+# Astróide: código R
+
+```{r,echo=TRUE,eval=TRUE}
+    require(ggplot2)
+    n=500
+    t=seq(0,2*pi, length.out = n)
+    raio=1
+    x=raio*cos(t)
+    y=raio*sin(t)
+    dt=tibble::tibble(x,y)
+    p=ggplot()+coord_fixed()+theme_void();
+    size=0.15
+    p=p+ geom_point(data=dt, aes(x=x, y=y),
+                    color='black',size=size)
+
+```
+
+# Visualización
+
+```{r,echo=T,out.width=250,fig.align='center'}
+p
+```
+
 
 # Referências 
 
