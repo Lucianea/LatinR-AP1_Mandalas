@@ -138,7 +138,10 @@ p
     * $\theta\in [0,2\pi]$
 \end{minipage}
 \begin{minipage}{.25\textwidth}
-Astroide como figura do kntr
+
+```{r,echo=FALSE,out.width=290,fig.align='center'}
+knitr::include_graphics(paste(file,"FigLivro01.png",sep="/"))
+```
 \end{minipage}
 \end{minipage}
 
@@ -170,11 +173,17 @@ p
 
 girar alrededor de un eje
 
-colocar figura
+
+```{r,echo=FALSE,out.width=290,fig.align='center'}
+knitr::include_graphics(paste(file,"FigLivro01.png",sep="/"))
+```
 
 *Homotecia: disminuir
 
-colocar figura
+
+```{r,echo=FALSE,out.width=290,fig.align='center'}
+knitr::include_graphics(paste(file,"FigLivro01.png",sep="/"))
+```
 
 # MandalaR
 
