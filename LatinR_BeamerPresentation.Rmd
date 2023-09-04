@@ -1,0 +1,124 @@
+---
+title: "Mandalas"
+subtitle: "<br/>  uma Abordagem para Desenvolver Habilidades Humanas com R"
+author: "Prof Dr Luciane, Prof. Dr. João Paulo"
+institute: "Academia da Força Aérea"
+date: "02 de agosto de 2023"
+header-includes:
+  - \pgfdeclareimage[height=.75cm]{logoAFA}{afa.jpg}
+  - \logo{\pgfuseimage{logoAFA}}
+output:
+  beamer_presentation:
+  includes:
+      in_header: mystyle.tex
+  keep_tex: true  
+theme: "AnnArbor" 
+---
+
+
+```{r,echo=FALSE,eval=TRUE,results='hide',warning=FALSE,message=FALSE}
+
+if(!require(ggplot2)){install.packages("ggplot2")}
+library(ggplot2)
+if(!require(tidyverse)){install.packages("tidyverse")}
+library(tidyverse)
+
+if(!require(dplyr)){install.packages("dplyr")}
+#Se der erro de latex, precisa instalar uyma versão. usei
+#tinytex::install_tinytex()
+library("knitr")
+library("tinytex")
+
+```
+
+```{r setup, include=FALSE}
+
+#knitr::opts_chunk$set(echo = TRUE)
+file2=getwd()
+file2
+file=paste(file2,"FigurasLatinR2023/",sep = "/")
+file
+```
+
+
+# Resumo
+
+* Introdução
+    * R
+    * Mandalas
+    * E-book
+* MandalaR
+* Códigos e Cores em R
+* Resultados
+    * Cores I   - alguns exemplos
+* Considerações finais
+  
+
+# Introdução
+* Algum texto
+
+# Mandalas com R: livro
+
+```{r,echo=FALSE,out.width=290,fig.align='center'}
+knitr::include_graphics(paste(file,"FigLivro01.png",sep="/"))
+```
+
+# Pacote R: mandalaR
+
+```{r,echo=FALSE,out.width=290,fig.align='center'}
+knitr::include_graphics(paste(file,"FigLivro01.png",sep="/"))
+```
+
+# Elementos iniciais
+
+* Instalação dos pacotes: **ggplot2** e **mandalaR**
+
+```{r,eval=FALSE,echo=TRUE}
+    install.packages("MandalaR")
+    install.packages("ggplot2")
+```
+
+* Circunferência
+  * Curva fundamental e conhecida da história da humanidade
+  * Propriedades fundamentais para a invenção da roda. 
+  * Antiga: escriba de Ahmes $\pi\approx 3.16$.
+  * Fundamental para o estudo das curvas clássicas. 
+  * Equação paramétrica:
+    * $x=r\cos(\theta)$
+    * $y=r\sin(\theta)$
+    * $\theta\in [0,2\pi]$
+
+# Circunferência: código R
+
+```{r,echo=TRUE,eval=TRUE}
+    require(ggplot2)
+    n=500
+    t=seq(0,2*pi, length.out = n)
+    raio=1
+    x=raio*cos(t)
+    y=raio*sin(t)
+    dt=tibble::tibble(x,y)
+    p=ggplot()+coord_fixed()+theme_void();
+    size=0.15
+    p=p+ geom_point(data=dt, aes(x=x, y=y),
+                    color='black',size=size)
+
+```
+
+# Visualização
+
+```{r,echo=T,out.width=250,fig.align='center'}
+p
+```
+
+# Referências 
+
+\tiny
+
+# Obrigado!
+
+
+* contato: email aqui!
+
+
+ 
