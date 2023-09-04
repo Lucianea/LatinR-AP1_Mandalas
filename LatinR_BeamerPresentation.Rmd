@@ -87,7 +87,7 @@ innovador
     install.packages("MandalaR")
     install.packages("ggplot2")
 ```
-# Explorando conceptos matemáticos - 1
+# Explorando conceptos matemáticos - curva1
 
 \begin{minipage}{\textwidth}
 \begin{minipage}{.75\textwidth}
@@ -126,7 +126,7 @@ Circunferencia como figura do kntr
 p
 ```
 
-# Explorando conceptos matemáticos -2
+# Explorando conceptos matemáticos - curva2
 
 \begin{minipage}{\textwidth}
 \begin{minipage}{.75\textwidth}
@@ -148,9 +148,9 @@ Astroide como figura do kntr
     require(ggplot2)
     n=500
     t=seq(0,2*pi, length.out = n)
-    raio=1
-    x=raio*cos(t)
-    y=raio*sin(t)
+    a=1
+    x=a*cos^3(t)
+    y=a*sin^3(t)
     dt=tibble::tibble(x,y)
     p=ggplot()+coord_fixed()+theme_void();
     size=0.15
@@ -164,6 +164,48 @@ Astroide como figura do kntr
 ```{r,echo=T,out.width=250,fig.align='center'}
 p
 ```
+# Transformaciones geométricas
+
+*Isometría: rotación
+
+girar alrededor de un eje
+
+colocar figura
+
+*Homotecia: disminuir
+
+colocar figura
+
+# MandalaR
+
+* Elección de rotación, disminución estandarizada en 3 niveles.
+```{r,echo=T,out.width=250,fig.align='center'}
+require(MandalaR)
+mandalar_basic("circle", theta = c(0,2*pi), raio=1, k = 45, n=100)
+```
+
+* cambiando la rotación
+```{r,echo=T,out.width=250,fig.align='center'}
+mandalar_basic("circle", theta = c(0,2*pi), raio=1, k = 90, n=100)
+```
+
+# Coloreando a mano
+
+Desarrolla la atención y la concentración, la motricidad fina, la creatividad y la imaginación, el sentido estético.
+
+* impresión en papel y pintura a mano
+
+inserir exemplos
+
+# Coloreando con R
+
+Desarrolla la capacidad de lógica matemática y programación.
+
+* uso de la lógica de programación
+
+# Historia del Arte
+
+Respetar la diversidad cultural, entendiendo los significados simbólicos y religiosos de cada tradición.
 
 
 # Referências 
