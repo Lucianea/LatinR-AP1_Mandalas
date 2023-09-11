@@ -379,7 +379,7 @@ p
 
 * rotación
 
-girar alrededor de un eje
+girar alrededor de un eje: los puntos negros se vuelven rojos
 
 ```{r echo=F, message=FALSE, warning=FALSE,out.width='90%'}
 #Semi círculo (red)
@@ -406,7 +406,7 @@ p
 
 * traslación
 
-cambiar la posición del objeto
+cambiar la posición del objeto: los puntos negros se traducen en verde, rojo y azul
 
 ```{r echo=F, message=FALSE, warning=FALSE,out.width='90%'}
 #Semi círculo (red)
