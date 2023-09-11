@@ -62,6 +62,166 @@ Selección de Libros, Encuentros y Seminarios
 knitr::include_graphics(paste(file,"Introducao.png",sep="/"))
 ```
 
+# Curvas paramétricas: $x=f(t)$ e $y=g(t)$, $t\in [a,b]$
+
+\begin{minipage}{\textwidth}
+
+\begin{minipage}{.32\textwidth}
+
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("Circulo01.png")
+
+```
+\end{minipage}
+\begin{minipage}{.32\textwidth}
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("Elipse01.png")
+
+```
+\end{minipage}
+\begin{minipage}{.32\textwidth}
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("Astroide01.png")
+
+```
+\end{minipage}
+
+\begin{minipage}{.32\textwidth}
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("Cardioide01.png")
+
+```
+\end{minipage}
+\begin{minipage}{.32\textwidth}
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("Lemniscata01.png")
+
+```
+\end{minipage}
+\begin{minipage}{.32\textwidth}
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("LemniscataBernouli01.png")
+
+```
+\end{minipage}
+\end{minipage}
+
+
+
+# Composiciones con movimientos rígidos
+
+\begin{minipage}{\textwidth}
+\begin{minipage}{.32\textwidth}
+
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("MandalaSentimentos01.png")
+
+```
+\end{minipage}
+\begin{minipage}{.32\textwidth}
+
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("MandalaYingYang01.png")
+
+```
+\end{minipage}
+\begin{minipage}{.32\textwidth}
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("MandalaEspiral01_01.png")
+
+```
+\end{minipage}
+
+\begin{minipage}{.32\textwidth}
+
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("MandalaInfinito01.png")
+
+```
+
+\end{minipage}
+\begin{minipage}{.32\textwidth}
+
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("MandalaAstroide02_01.png")
+
+```
+\end{minipage}
+\begin{minipage}{.32\textwidth}
+
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("MandalaEscudo02.png")
+
+```
+\end{minipage}
+\end{minipage}
+
+
+
+# Modelos de color \textit{Red Green Blue} (RGB)
+
+\begin{minipage}{\textwidth}
+\begin{minipage}{.32\textwidth}
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("MandalaInfinito01Colorida03.png")
+
+```
+\end{minipage}
+\begin{minipage}{.32\textwidth}
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("MandalaInfinito01Colorida04.png")
+
+```
+\end{minipage}
+\begin{minipage}{.32\textwidth}
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("MandalaInfinito01Colorida03_13.png")
+
+```
+\end{minipage}
+
+
+\begin{minipage}{.32\textwidth}
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("MandalaInfinito01Colorida03_28.png")
+
+```
+\end{minipage}
+\begin{minipage}{.32\textwidth}
+
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("MandalaInfinito01Colorida03_15.png")
+
+```
+
+\end{minipage}
+\begin{minipage}{.32\textwidth}
+
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("MandalaInfinito01Colorida03_20.png")
+
+```
+\end{minipage}
+\end{minipage}
+
 # Libro Abierto
 
 [https://www.livrosabertos.sibi.usp.br/portaldelivrosUSP/catalog/book/1017](https://www.livrosabertos.sibi.usp.br/portaldelivrosUSP/catalog/book/1017)
