@@ -440,8 +440,8 @@ knitr::include_graphics(paste(file,"homer-simpson-the-simpsons.gif",sep="/"))
 * Homotecia: disminuir
 
 
-```{r,eval=FALSE, include=FALSE, echo=FALSE,out.width=290,fig.align='center', message=FALSE, warning=FALSE}
-knitr::include_graphics(paste(file,"matrioska-si.gif",sep="/"))
+```{r,eval=TRUE, include=FALSE, echo=FALSE,out.width=290,fig.align='center', message=FALSE, warning=FALSE}
+knitr::include_graphics("FigurasLatinR2023/matrioska.png")
 ```
 
 # MandalaR
@@ -463,13 +463,46 @@ Desarrolla la atención y la concentración, la motricidad fina, la creatividad 
 
 * impresión en papel y pintura a mano
 
-inserir exemplos
+# Ejemplos
+
+\begin{minipage}
+\begin{minipage}{.5\textwidth}
+
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("mandala_mao2.png")
+
+```
+\end{minipage}
+
+\begin{minipage}{.5\textwidth}
+
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("mandala_mao2.png")
+
+```
+\end{minipage}
+
+
+\end{minipage}
+
+
 
 # Coloreando con R
 
 Desarrolla la capacidad de lógica matemática y programación.
 
-* uso de la lógica de programación
+* uso de la lógica de programación (for)
+* colors() => 657 posibilidades.
+* resultados diferentes con pequeños cambios en los parámetros
+* uso de secuencias o muestras de color aleatorias
+
+# Ejemplo
+
+
+
+
 
 # Historia del Arte
 
