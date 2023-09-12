@@ -1,30 +1,14 @@
-\frametitle{MandalaR}
-\protect\hypertarget{mandalar}{}
-\begin{itemize}
-\tightlist
-\item
-  Elección de rotación, disminución estandarizada en 3 niveles.
-\end{itemize}
-
+\frametitle{MandalaR: circle cambiando la rotación}
+\protect\hypertarget{mandalar-circle-cambiando-la-rotaciuxf3n}{}
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{require}\NormalTok{(MandalaR)}
-\FunctionTok{mandalar\_basic}\NormalTok{(}\StringTok{"circle"}\NormalTok{, }\AttributeTok{theta =} \FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{2}\SpecialCharTok{*}\NormalTok{pi), }\AttributeTok{raio=}\DecValTok{1}\NormalTok{, }\AttributeTok{k =} \DecValTok{45}\NormalTok{, }\AttributeTok{n=}\DecValTok{100}\NormalTok{)}
+\FunctionTok{mandalar\_basic}\NormalTok{(}\StringTok{"circle"}\NormalTok{, }\AttributeTok{theta =} \FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{2}\SpecialCharTok{*}\NormalTok{pi),}
+               \AttributeTok{raio=}\DecValTok{1}\NormalTok{, }\AttributeTok{k =} \DecValTok{90}\NormalTok{, }\AttributeTok{n=}\DecValTok{100}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics[width=250px]{LatinR_BeamerPresentation_files/figure-beamer/unnamed-chunk-20-1} \end{center}
+\begin{center}\includegraphics[width=90px]{LatinR_BeamerPresentation_files/figure-beamer/unnamed-chunk-21-1} \end{center}
 
-\begin{itemize}
-\tightlist
-\item
-  cambiando la rotación
-\end{itemize}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{mandalar\_basic}\NormalTok{(}\StringTok{"circle"}\NormalTok{, }\AttributeTok{theta =} \FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{2}\SpecialCharTok{*}\NormalTok{pi), }\AttributeTok{raio=}\DecValTok{1}\NormalTok{, }\AttributeTok{k =} \DecValTok{90}\NormalTok{, }\AttributeTok{n=}\DecValTok{100}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{center}\includegraphics[width=250px]{LatinR_BeamerPresentation_files/figure-beamer/unnamed-chunk-21-1} \end{center}
+curvas elegibles: ``circle'',``elipse'', ``cardioide'',``limacon'',
+``espiral1'', ``espiral2'', ``lemniscata'', ``deltoide'' and
+``astroide''

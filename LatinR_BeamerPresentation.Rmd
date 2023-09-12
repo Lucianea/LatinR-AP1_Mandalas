@@ -49,219 +49,25 @@ file
 * Introducción
     * Valores Humanos x Habilidades Humanas x R x Mandalas
 * Objetivos
-* Conceptos matemáticos
 * Actividades
+* Conceptos matemáticos
 * Resultados
 * Consideraciones finales
   
-# Difusión de R en la comunidad
+# Difusión de R en la comunidad: Libros y Seminarios
 
-Selección de Libros, Encuentros y Seminarios
-
-```{r,echo=FALSE,out.width=150,fig.align='center'}
+```{r,echo=FALSE,out.width='90%', fig.align='center'}
 knitr::include_graphics(paste(file,"Introducao.png",sep="/"))
 ```
 
-# Curvas paramétricas: $x=f(t)$ e $y=g(t)$, $t\in [a,b]$
-
-\begin{minipage}{\textwidth}
-
-\begin{minipage}{.32\textwidth}
-
-```{r, echo=FALSE, out.width = '90%'}
-
-knitr::include_graphics("Circulo01.png")
-
-```
-\end{minipage}
-\begin{minipage}{.32\textwidth}
-```{r, echo=FALSE, out.width = '90%'}
-
-knitr::include_graphics("Elipse01.png")
-
-```
-\end{minipage}
-\begin{minipage}{.32\textwidth}
-```{r, echo=FALSE, out.width = '90%'}
-
-knitr::include_graphics("Astroide01.png")
-
-```
-\end{minipage}
-
-\begin{minipage}{.32\textwidth}
-```{r, echo=FALSE, out.width = '90%'}
-
-knitr::include_graphics("Cardioide01.png")
-
-```
-\end{minipage}
-\begin{minipage}{.32\textwidth}
-```{r, echo=FALSE, out.width = '90%'}
-
-knitr::include_graphics("Lemniscata01.png")
-
-```
-\end{minipage}
-\begin{minipage}{.32\textwidth}
-```{r, echo=FALSE, out.width = '90%'}
-
-knitr::include_graphics("LemniscataBernouli01.png")
-
-```
-\end{minipage}
-\end{minipage}
-
-
-
-# Composiciones con movimientos rígidos
-
-\begin{minipage}{\textwidth}
-\begin{minipage}{.32\textwidth}
-
-```{r, echo=FALSE, out.width = '90%'}
-
-knitr::include_graphics("MandalaSentimentos01.png")
-
-```
-\end{minipage}
-\begin{minipage}{.32\textwidth}
-
-```{r, echo=FALSE, out.width = '90%'}
-
-knitr::include_graphics("MandalaYingYang01.png")
-
-```
-\end{minipage}
-\begin{minipage}{.32\textwidth}
-```{r, echo=FALSE, out.width = '90%'}
-
-knitr::include_graphics("MandalaEspiral01_01.png")
-
-```
-\end{minipage}
-
-\begin{minipage}{.32\textwidth}
-
-```{r, echo=FALSE, out.width = '90%'}
-
-knitr::include_graphics("MandalaInfinito01.png")
-
-```
-
-\end{minipage}
-\begin{minipage}{.32\textwidth}
-
-```{r, echo=FALSE, out.width = '90%'}
-
-knitr::include_graphics("MandalaAstroide02_01.png")
-
-```
-\end{minipage}
-\begin{minipage}{.32\textwidth}
-
-```{r, echo=FALSE, out.width = '90%'}
-
-knitr::include_graphics("MandalaEscudo02.png")
-
-```
-\end{minipage}
-\end{minipage}
-
-
-
-# Modelos de color \textit{Red Green Blue} (RGB)
-
-\begin{minipage}{\textwidth}
-\begin{minipage}{.32\textwidth}
-```{r, echo=FALSE, out.width = '90%'}
-
-knitr::include_graphics("MandalaInfinito01Colorida03.png")
-
-```
-\end{minipage}
-\begin{minipage}{.32\textwidth}
-```{r, echo=FALSE, out.width = '90%'}
-
-knitr::include_graphics("MandalaInfinito01Colorida04.png")
-
-```
-\end{minipage}
-\begin{minipage}{.32\textwidth}
-```{r, echo=FALSE, out.width = '90%'}
-
-knitr::include_graphics("MandalaInfinito01Colorida03_13.png")
-
-```
-\end{minipage}
-
-
-\begin{minipage}{.32\textwidth}
-```{r, echo=FALSE, out.width = '90%'}
-
-knitr::include_graphics("MandalaInfinito01Colorida03_28.png")
-
-```
-\end{minipage}
-\begin{minipage}{.32\textwidth}
-
-```{r, echo=FALSE, out.width = '90%'}
-
-knitr::include_graphics("MandalaInfinito01Colorida03_15.png")
-
-```
-
-\end{minipage}
-\begin{minipage}{.32\textwidth}
-
-```{r, echo=FALSE, out.width = '90%'}
-
-knitr::include_graphics("MandalaInfinito01Colorida03_20.png")
-
-```
-\end{minipage}
-\end{minipage}
-
-# Libro Abierto
-
-[https://www.livrosabertos.sibi.usp.br/portaldelivrosUSP/catalog/book/1017](https://www.livrosabertos.sibi.usp.br/portaldelivrosUSP/catalog/book/1017)
-
-```{r,echo=FALSE,out.width=60,fig.align='center'}
-knitr::include_graphics(paste(file,"QRCODE_livro.png",sep="/"))
-```
-
-```{r,echo=FALSE,out.width=150,fig.align='center'}
-knitr::include_graphics(paste(file,"FigLivro01.png",sep="/"))
-```
-
-# Pacote R: mandalaR
-
-[https://cran.r-project.org/web/packages/MandalaR/index.html](https://cran.r-project.org/web/packages/MandalaR/index.html)
-
-- Genera mandalas a partir de la selección de un conjunto de curvas clásicas. 
-
-- un método con elección del ángulo de rotación y 3 pasos de traslación fijos
-
-- Necesidad de desarrollar nuevas funciones.
-
-```{r,echo=FALSE,out.width=180,fig.align='center'}
-MandalaR::mandalar_basic("elipse", theta = c(0,2*pi), a=1, b=2, k = 40, n=250)
-```
-
-# Aplicativo shiny
-
-* Precursor del paquete MandalaR
-
-* Permite generar mandalas sin esfuerzo de programación
-
-![https://lucianealcoforado.shinyapps.io/Mandala/](FigurasLatinR2023/shiny_mandala.png)
-
-
 # Introducción
+
+**Posibilidades con mandalas (diagrama circular de origen incierto presente en civilizaciones antiguas)**
+
 * Valores Humanos: respeto a la diversidad cultural.
 * Habilidades Humanas: creatividad, concentración, razonamiento lógico
-* Actividades que incluyen R
-* Mándalas
+* Actividades: Conceptos matemáticos que incluyen R
+
 
 # Objetivo
 
@@ -281,24 +87,99 @@ innovador
 # Mandalas
 
 La relación entre el Mandala y las matemáticas se encuentra en su significado (círculo). Los mandalas están compuestos por figuras geométricas que se repiten mediante transformaciones matemáticas. Además, los mandalas aparecen en diferentes culturas.
+Tíbet,    China      y     Mexico.
 
-## Exemplos
-
-\begin{minipage}{.8\textwidth}
+\begin{minipage}{\textwidth}
 \center
 ```{r pressure, echo=FALSE, out.width = '100%'}
 knitr::include_graphics(paste(file,"culturas_mandalas.png",sep="/"))
 ```
 \end{minipage}
 
+# Historia del Arte
 
-# Explorando conceptos matemáticos - circunferência
+Respetar la diversidad cultural, entendiendo los significados simbólicos y religiosos de cada tradición.
+
+La historia del arte es una forma de comprender las diferentes expresiones artísticas que las personas han creado a lo largo del tiempo, reflejando sus identidades, valores, creencias, sentimientos y visiones del mundo.
+
+\begin{minipage}{\textwidth}
+
+```{r, echo=FALSE, out.width = '80%'}
+
+knitr::include_graphics("FigurasLatinR2023/respeito_monica_cebolinha.png")
+
+```
+
+\end{minipage}
+
+
+
+# Coloreando a mano: impresión en papel y pintura a mano
+
+Desarrolla la atención y la concentración, la motricidad fina, la creatividad y la imaginación, el sentido estético.
+
+\begin{minipage}{\textwidth}
+
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("FigurasLatinR2023/pintura_monica_cebolinha.png")
+
+```
+
+\end{minipage}
+
+# Ejemplos a mano
+
+\begin{minipage}{\textwidth}
+\begin{minipage}{.45\textwidth}
+
+```{r, echo=FALSE, out.width = '80%'}
+
+knitr::include_graphics("FigurasLatinR2023/mandala_colorida_lu_xornada.png")
+
+```
+\end{minipage}
+\begin{minipage}{.45\textwidth}
+
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("FigurasLatinR2023/mandala_mao2.jpg")
+
+```
+\end{minipage}
+\end{minipage}
+
+# Coloreando con R
+
+Desarrolla la capacidad de lógica matemática y programación.
+
+* uso de la lógica de programación (for)
+* colors() => 657 posibilidades: uso de secuencias o muestras de color aleatorias
+* resultados diferentes con pequeños cambios en los parámetros
+
+\begin{minipage}{\textwidth}
+
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("FigurasLatinR2023/computador_monica_cebolinha.png")
+
+```
+
+\end{minipage}
+
+
+
+
+# Explorando conceptos matemáticos - curvas
+
+\begin{minipage}{\textwidth}
+\begin{minipage}{0.45\textwidth}
 
 ```{r,echo=FALSE,out.width=50,fig.align='center'}
 knitr::include_graphics("FigurasLatinR2023/Circulo.png")
 ```
 
-* Fundamental para el estudio de curvas clásicas.
+* Circunferencia: Fundamental para el estudio de curvas clásicas.
   
 * Ecuación paramétrica:
   
@@ -307,7 +188,26 @@ $x=r\cos(\theta)$
 $y=r\sin(\theta)$
      
 $\theta\in [0,2\pi]$
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
 
+
+```{r echo=FALSE, out.width=50,fig.align='center'}
+knitr::include_graphics("FigurasLatinR2023/astroide_circle.png")
+```
+
+* Astroide: Curva menos conocida
+  
+* Ecuación paramétrica:
+  
+$x=a\cos^3(\theta)$
+    
+$y=a\sin^3(\theta)$
+    
+$\theta\in [0,2\pi]$
+
+\end{minipage}
+\end{minipage}
 
 
 # Circunferencia: código R
@@ -332,24 +232,6 @@ $\theta\in [0,2\pi]$
 ```{r,echo=T,out.width=250,fig.align='center'}
 p
 ```
-
-# Explorando conceptos matemáticos - Astróide
-```{r eval=FALSE, include=FALSE}
-knitr::include_graphics("FigurasLatinR2023/astroid_circle.gif")
-```
-```{r echo=FALSE, out.width=80,fig.align='center'}
-knitr::include_graphics("FigurasLatinR2023/astroide_circle.png")
-```
-
-* Curva menos conhecida
-  
-* Equação paramétrica:
-  
-$x=a\cos^3(\theta)$
-    
-$y=a\sin^3(\theta)$
-    
-$\theta\in [0,2\pi]$
 
 
 # Astróide: código R
@@ -431,92 +313,259 @@ p=
 p
 ```
 
-
-```{r,eval=FALSE,echo=FALSE,out.width=290,fig.align='center'}
-knitr::include_graphics(paste(file,"homer-simpson-the-simpsons.gif",sep="/"))
-```
 # Transformaciones geométricas
 
-* Homotecia: disminuir
+* Homotecia: disminuir manteniendo la forma
 
 
-```{r,eval=TRUE, include=FALSE, echo=FALSE,out.width=290,fig.align='center', message=FALSE, warning=FALSE}
+```{r, echo=FALSE,out.width=290,fig.align='center', message=FALSE, warning=FALSE}
 knitr::include_graphics("FigurasLatinR2023/matrioska.png")
 ```
 
-# MandalaR
+# MandalaR: circle
 
-* Elección de rotación, disminución estandarizada en 3 niveles.
-```{r,echo=T,out.width=250,fig.align='center', message=FALSE, warning=FALSE}
+* Elección de curva y rotación, método dos traslaciones a la derecha del centro.
+```{r,echo=T,out.width=200,fig.align='center', message=FALSE, warning=FALSE}
 require(MandalaR)
-mandalar_basic("circle", theta = c(0,2*pi), raio=1, k = 45, n=100)
+mandalar_basic("circle", theta = c(0,2*pi),
+               raio=1, k = 45, n=100)
 ```
 
-* cambiando la rotación
-```{r,echo=T,out.width=250,fig.align='center'}
-mandalar_basic("circle", theta = c(0,2*pi), raio=1, k = 90, n=100)
+# MandalaR: circle cambiando la rotación
+
+```{r,echo=T,out.width=90,fig.align='center'}
+mandalar_basic("circle", theta = c(0,2*pi),
+               raio=1, k = 90, n=100)
 ```
 
-# Coloreando a mano
+curvas elegibles: "circle","elipse", "cardioide","limacon", "espiral1", "espiral2", "lemniscata", "deltoide" and "astroide"
 
-Desarrolla la atención y la concentración, la motricidad fina, la creatividad y la imaginación, el sentido estético.
+# Curvas paramétricas: $x=f(t)$ e $y=g(t)$, $t\in [a,b]$
 
-* impresión en papel y pintura a mano
+\begin{minipage}{\textwidth}
 
-# Ejemplos
-
-\begin{minipage}
-\begin{minipage}{.5\textwidth}
+\begin{minipage}{.32\textwidth}
 
 ```{r, echo=FALSE, out.width = '90%'}
 
-knitr::include_graphics("mandala_mao2.png")
+knitr::include_graphics("FigurasLatinR2023/Circulo01.png")
+
+```
+\end{minipage}
+\begin{minipage}{.32\textwidth}
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("FigurasLatinR2023/Elipse01.png")
+
+```
+\end{minipage}
+\begin{minipage}{.32\textwidth}
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("FigurasLatinR2023/Astroide01.png")
 
 ```
 \end{minipage}
 
-\begin{minipage}{.5\textwidth}
+\begin{minipage}{.32\textwidth}
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("FigurasLatinR2023/Cardioide01.png")
+
+```
+\end{minipage}
+\begin{minipage}{.32\textwidth}
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("FigurasLatinR2023/Lemniscata01.png")
+
+```
+\end{minipage}
+\begin{minipage}{.32\textwidth}
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("FigurasLatinR2023/LemniscataBernouli01.png")
+
+```
+\end{minipage}
+\end{minipage}
+
+
+
+# Composiciones con movimientos rígidos
+
+\begin{minipage}{\textwidth}
+\begin{minipage}{.32\textwidth}
 
 ```{r, echo=FALSE, out.width = '90%'}
 
-knitr::include_graphics("mandala_mao2.png")
+knitr::include_graphics("FigurasLatinR2023/MandalaSentimentos01.png")
+
+```
+\end{minipage}
+\begin{minipage}{.32\textwidth}
+
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("FigurasLatinR2023/MandalaYingYang01.png")
+
+```
+\end{minipage}
+\begin{minipage}{.32\textwidth}
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("FigurasLatinR2023/MandalaEspiral01_01.png")
+
+```
+\end{minipage}
+
+\begin{minipage}{.32\textwidth}
+
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("FigurasLatinR2023/MandalaInfinito01.png")
+
+```
+
+\end{minipage}
+\begin{minipage}{.32\textwidth}
+
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("FigurasLatinR2023/MandalaAstroide02_01.png")
+
+```
+\end{minipage}
+\begin{minipage}{.32\textwidth}
+
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("FigurasLatinR2023/MandalaEscudo02.png")
+
+```
+\end{minipage}
+\end{minipage}
+
+
+
+# Modelos de color \textit{Red Green Blue} (RGB)
+
+\begin{minipage}{\textwidth}
+\begin{minipage}{.32\textwidth}
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("FigurasLatinR2023/MandalaInfinito01Colorida03.png")
+
+```
+\end{minipage}
+\begin{minipage}{.32\textwidth}
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("FigurasLatinR2023/MandalaInfinito01Colorida03_13.png")
+
+```
+\end{minipage}
+\begin{minipage}{.32\textwidth}
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("FigurasLatinR2023/MandalaInfinito01Colorida03_15.png")
 
 ```
 \end{minipage}
 
 
+\begin{minipage}{.32\textwidth}
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("FigurasLatinR2023/MandalaInfinito01Colorida03_19.png")
+
+```
+\end{minipage}
+\begin{minipage}{.32\textwidth}
+
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("FigurasLatinR2023/MandalaInfinito01Colorida03_20.png")
+
+```
+
+\end{minipage}
+\begin{minipage}{.32\textwidth}
+
+```{r, echo=FALSE, out.width = '90%'}
+
+knitr::include_graphics("FigurasLatinR2023/MandalaInfinito01Colorida04.png")
+
+```
+\end{minipage}
 \end{minipage}
 
+# Resultados
+
+- Libro gratuito disponible desde mayo de 2023, cuaderno de actividades en construcción
+
+- Paquete MandalaR en CRAN desde diciembre de 2022, nueva versión en construcción
+
+- aplicación shiny desde 2022
+
+# Libro Abierto
+
+[https://www.livrosabertos.sibi.usp.br/portaldelivrosUSP/catalog/book/1017](https://www.livrosabertos.sibi.usp.br/portaldelivrosUSP/catalog/book/1017)
+
+```{r,echo=FALSE,out.width=60,fig.align='center'}
+knitr::include_graphics(paste(file,"QRCODE_livro.png",sep="/"))
+```
+
+```{r,echo=FALSE,out.width=150,fig.align='center'}
+knitr::include_graphics(paste(file,"FigLivro01.png",sep="/"))
+```
+
+# Pacote R: mandalaR
+
+[https://cran.r-project.org/web/packages/MandalaR/index.html](https://cran.r-project.org/web/packages/MandalaR/index.html)
+
+- Genera mandalas a partir de la selección de un conjunto de curvas clásicas. 
+
+- un método con elección del ángulo de rotación y 2 pasos de traslación fijos
+
+- Necesidad de desarrollar nuevas funciones.
+
+```{r,echo=FALSE,out.width=180,fig.align='center'}
+MandalaR::mandalar_basic("elipse", theta = c(0,2*pi), a=1, b=2, k = 40, n=250)
+```
+
+# Aplicativo shiny
+
+* Precursor del paquete MandalaR
+
+* Permite generar mandalas sin esfuerzo de programación
+
+![https://lucianealcoforado.shinyapps.io/Mandala/](FigurasLatinR2023/shiny_mandala.png)
+
+# Consideraciones finales
+
+* Presentamos un posible enfoque para el desarrollo de habilidades humanas con R, una propuesta de utilizar el lenguaje de programación R para crear y analizar mandalas, explorando conceptos matemáticos, estéticos y creativos.
+
+* Idealizamos un enfoque multidisciplinario que involucra matemáticas, historia, arte y programación con R.
+
+* A medida que continuamos con esta investigación, pretendemos desarrollar nuevas funciones y proporcionar un cuaderno de actividades.
+
+* Buscamos alianzas con profesionales de otras áreas como pedagogos, terapeutas ocupacionales, psicólogos, artistas, entre otros.
 
 
-# Coloreando con R
 
-Desarrolla la capacidad de lógica matemática y programación.
-
-* uso de la lógica de programación (for)
-* colors() => 657 posibilidades.
-* resultados diferentes con pequeños cambios en los parámetros
-* uso de secuencias o muestras de color aleatorias
-
-# Ejemplo
-
-
-
-
-
-# Historia del Arte
-
-Respetar la diversidad cultural, entendiendo los significados simbólicos y religiosos de cada tradición.
 
 
 # Referências 
+
+
 
 \tiny
 
 # Obrigado!
 
 
-* contato: email aqui!
+* contato: lucianea@id.uff.br; jpmdossantos@yahoo.com
 
 
  
