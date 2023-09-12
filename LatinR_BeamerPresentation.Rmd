@@ -1,7 +1,7 @@
 ---
 title: "Mandalas"
-subtitle: "<br/>  uma Abordagem para Desenvolver Habilidades Humanas com R"
-author: "Profa. Dra. Luciane, Prof. Dr. João Paulo, Prof. Dr. Orlando e Prof. Dr. Ariel"
+subtitle: "<br/>  Uma Abordagem para Desenvolver Habilidades Humanas com R <br/> Prof. Luciane Alcoforado"
+author: "Luciane, João Paulo, Orlando e Ariel"
 institute: "Academia da Força Aérea/ Universidade Federal Fluminense"
 date: "outubro de 2023"
 header-includes:
@@ -133,7 +133,7 @@ knitr::include_graphics("FigurasLatinR2023/pintura_monica_cebolinha.png")
 \begin{minipage}{\textwidth}
 \begin{minipage}{.45\textwidth}
 
-```{r, echo=FALSE, out.width = '80%'}
+```{r, echo=FALSE, out.width = '100%'}
 
 knitr::include_graphics("FigurasLatinR2023/mandala_colorida_lu_xornada.png")
 
@@ -141,7 +141,7 @@ knitr::include_graphics("FigurasLatinR2023/mandala_colorida_lu_xornada.png")
 \end{minipage}
 \begin{minipage}{.45\textwidth}
 
-```{r, echo=FALSE, out.width = '90%'}
+```{r, echo=FALSE, out.width = '100%'}
 
 knitr::include_graphics("FigurasLatinR2023/mandala_mao2.jpg")
 
@@ -173,7 +173,7 @@ knitr::include_graphics("FigurasLatinR2023/computador_monica_cebolinha.png")
 # Explorando conceptos matemáticos - curvas
 
 \begin{minipage}{\textwidth}
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.5\textwidth}
 
 ```{r,echo=FALSE,out.width=50,fig.align='center'}
 knitr::include_graphics("FigurasLatinR2023/Circulo.png")
@@ -189,7 +189,7 @@ $y=r\sin(\theta)$
      
 $\theta\in [0,2\pi]$
 \end{minipage}
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.40\textwidth}
 
 
 ```{r echo=FALSE, out.width=50,fig.align='center'}
@@ -227,9 +227,9 @@ $\theta\in [0,2\pi]$
 
 ```
 
-# Visualización
+# Visualización Circunferencia
 
-```{r,echo=T,out.width=250,fig.align='center'}
+```{r,echo=F,out.width=250,fig.align='center'}
 p
 ```
 
@@ -251,7 +251,7 @@ p
 
 ```
 
-# Visualización
+# Visualización Astroide
 
 ```{r,echo=F,out.width=250,fig.align='center'}
 p
@@ -325,7 +325,7 @@ knitr::include_graphics("FigurasLatinR2023/matrioska.png")
 # MandalaR: circle
 
 * Elección de curva y rotación, método dos traslaciones a la derecha del centro.
-```{r,echo=T,out.width=200,fig.align='center', message=FALSE, warning=FALSE}
+```{r,echo=T,out.width=190,fig.align='center', message=FALSE, warning=FALSE}
 require(MandalaR)
 mandalar_basic("circle", theta = c(0,2*pi),
                raio=1, k = 45, n=100)
@@ -333,7 +333,7 @@ mandalar_basic("circle", theta = c(0,2*pi),
 
 # MandalaR: circle cambiando la rotación
 
-```{r,echo=T,out.width=90,fig.align='center'}
+```{r,echo=T,out.width=120,fig.align='center'}
 mandalar_basic("circle", theta = c(0,2*pi),
                raio=1, k = 90, n=100)
 ```
@@ -512,15 +512,22 @@ knitr::include_graphics("FigurasLatinR2023/MandalaInfinito01Colorida04.png")
 
 [https://www.livrosabertos.sibi.usp.br/portaldelivrosUSP/catalog/book/1017](https://www.livrosabertos.sibi.usp.br/portaldelivrosUSP/catalog/book/1017)
 
-```{r,echo=FALSE,out.width=60,fig.align='center'}
+
+\begin{minipage}{\textwidth}
+\begin{minipage}{.5\textwidth}
+```{r,echo=FALSE,out.width=110,fig.align='center'}
+knitr::include_graphics(paste(file,"capa_livro_mandalas.png",sep="/"))
+```
+\end{minipage}
+\begin{minipage}{.40\textwidth}
+
+```{r,echo=FALSE,out.width='100%',fig.align='center'}
 knitr::include_graphics(paste(file,"QRCODE_livro.png",sep="/"))
 ```
 
-```{r,echo=FALSE,out.width=150,fig.align='center'}
-knitr::include_graphics(paste(file,"FigLivro01.png",sep="/"))
-```
-
-# Pacote R: mandalaR
+\end{minipage}
+\end{minipage}
+# Paquete R: mandalaR
 
 [https://cran.r-project.org/web/packages/MandalaR/index.html](https://cran.r-project.org/web/packages/MandalaR/index.html)
 
@@ -558,9 +565,11 @@ MandalaR::mandalar_basic("elipse", theta = c(0,2*pi), a=1, b=2, k = 40, n=250)
 
 # Referências 
 
+ALCOFORADO, L.F. et al. Mandalas, curvas clássicas e visualização com R. Universidade de São Paulo. Faculdade de Zootecnia e Engenharia de Alimentos, 2023. DOI: <https://doi.org/10.11606/9786587023335> Disponível em: <https://www.livrosabertos.sibi.usp.br/portaldelivrosUSP/catalog/book/1017> . Acesso em 12 setembro. 2023.
+
+ALCOFORADO, L.F. MandalaR: Building Mandalas from Parametric Equations of Classical Curves. R package version 0.1.0, 2022. <https://CRAN.R-project.org/package=MandalaR>.
 
 
-\tiny
 
 # Obrigado!
 

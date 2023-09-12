@@ -2,7 +2,7 @@
 title: "Mandalas:"
 subtitle: "uma Abordagem para Desenvolver Habilidades Humanas com R"
 author: 
-  - "Luciane Ferreira Alcoforado"
+  - "Luciane Ferreira Alcoforado +"
   - "João Paulo Martins dos Santos + Orlando Celso Longo + Ariel Levy"
 date: '`r Sys.Date()`'
 output:

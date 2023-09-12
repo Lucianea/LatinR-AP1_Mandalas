@@ -1,0 +1,348 @@
+---
+title: "Mandalas"
+subtitle: "<br/>  uma Abordagem para Desenvolver Habilidades Humanas com R"
+author: "Profa. Dra. Luciane, Prof. Dr. João Paulo, Prof. Dr. Orlando e Prof. Dr. Ariel"
+institute: "Academia da Força Aérea/ Universidade Federal Fluminense"
+date: "outubro de 2023"
+format: 
+  beamer:
+    navigation: horizontal
+    header-includes: |
+      \titlegraphic{\includegraphics[width=0.4\paperwidth]{logos.png}}
+      \pgfdeclareimage[height=.75cm]{logoAFA}{logos.png}
+      \logo{\pgfuseimage{logoAFA}}
+theme: "AnnArbor" 
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+
+## Bullets
+
+When you click the **Render** button a document will be generated that includes:
+
+-   Content authored with markdown
+-   Output from executable code
+
+## Code
+
+When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+
+
+
+
+
+```{r,echo=FALSE,eval=TRUE,results='hide',warning=FALSE,message=FALSE}
+
+if(!require(ggplot2)){install.packages("ggplot2")}
+library(ggplot2)
+if(!require(tidyverse)){install.packages("tidyverse")}
+library(tidyverse)
+
+if(!require(dplyr)){install.packages("dplyr")}
+#Se der erro de latex, precisa instalar uyma versão. usei
+#tinytex::install_tinytex()
+library("knitr")
+library("tinytex")
+
+```
+
+```{r setup, include=FALSE, message=FALSE, warning=FALSE}
+
+#knitr::opts_chunk$set(echo = TRUE)
+file2=getwd()
+file2
+file=paste(file2,"FigurasLatinR2023/",sep = "/")
+file
+```
+
+
+# guión de presentación
+
+* Que hacemos
+* Introducción
+    * Valores Humanos x Habilidades Humanas x R x Mandalas
+* Objetivos
+* Conceptos matemáticos
+* Actividades
+* Resultados
+* Consideraciones finales
+  
+# Difusión de R en la comunidad
+
+Selección de Libros, Encuentros y Seminarios
+
+```{r,echo=FALSE,out.width=150,fig.align='center'}
+knitr::include_graphics(paste(file,"Introducao.png",sep="/"))
+```
+
+# Libro Abierto
+
+[https://www.livrosabertos.sibi.usp.br/portaldelivrosUSP/catalog/book/1017](https://www.livrosabertos.sibi.usp.br/portaldelivrosUSP/catalog/book/1017)
+
+```{r,echo=FALSE,out.width=60,fig.align='center'}
+knitr::include_graphics(paste(file,"QRCODE_livro.png",sep="/"))
+```
+
+```{r,echo=FALSE,out.width=150,fig.align='center'}
+knitr::include_graphics(paste(file,"FigLivro01.png",sep="/"))
+```
+
+# Pacote R: mandalaR
+
+[https://cran.r-project.org/web/packages/MandalaR/index.html](https://cran.r-project.org/web/packages/MandalaR/index.html)
+
+- Genera mandalas a partir de la selección de un conjunto de curvas clásicas. 
+
+- un método con elección del ángulo de rotación y 3 pasos de traslación fijos
+
+- Necesidad de desarrollar nuevas funciones.
+
+```{r,echo=FALSE,out.width=180,fig.align='center'}
+MandalaR::mandalar_basic("elipse", theta = c(0,2*pi), a=1, b=2, k = 40, n=250)
+```
+
+# Aplicativo shiny
+
+* Precursor del paquete MandalaR
+
+* Permite generar mandalas sin esfuerzo de programación
+
+![https://lucianealcoforado.shinyapps.io/Mandala/](FigurasLatinR2023/shiny_mandala.png)
+
+
+# Introducción
+* Valores Humanos: respeto a la diversidad cultural.
+* Habilidades Humanas: creatividad, concentración, razonamiento lógico
+* Actividades que incluyen R
+* Mándalas
+
+# Objetivo
+
+* Estimular el aprendizaje y uso del lenguaje R de manera
+innovador
+
+\textrm{\large{R + Matemáticas + Arte = Mándalas}}
+
+# Paquetes Requeridos para la Actividad
+
+*  **ggplot2** y **mandalaR**
+
+```{r,eval=FALSE,echo=TRUE}
+    install.packages("MandalaR")
+    install.packages("ggplot2")
+```
+# Mandalas
+
+La relación entre el Mandala y las matemáticas se encuentra en su significado (círculo). Los mandalas están compuestos por figuras geométricas que se repiten mediante transformaciones matemáticas. Además, los mandalas aparecen en diferentes culturas.
+
+
+\begin{minipage}{.9\textwidth}
+\center
+```{r pressure, echo=FALSE, out.width = '100%'}
+knitr::include_graphics(paste(file,"culturas_mandalas.png",sep="/"))
+```
+\end{minipage}
+
+
+# Explorando conceptos matematicos - circunferencia
+
+```{r,echo=FALSE,out.width=50,fig.align='center'}
+knitr::include_graphics("FigurasLatinR2023/Circulo.png")
+```
+
+* Fundamental para el estudio de curvas clásicas.
+  
+* Ecuación paramétrica:
+  
+$x=r\cos(\theta)$
+     
+$y=r\sin(\theta)$
+     
+$\theta\in [0,2\pi]$
+
+
+
+# Circunferencia: código R
+
+```{r,echo=TRUE,eval=TRUE}
+    require(ggplot2)
+    n=500
+    t=seq(0,2*pi, length.out = n)
+    raio=1
+    x=raio*cos(t)
+    y=raio*sin(t)
+    dt=tibble::tibble(x,y)
+    p=ggplot()+coord_fixed()+theme_void();
+    size=0.15
+    p=p+ geom_point(data=dt, aes(x=x, y=y),
+                    color='black',size=size)
+
+```
+
+# Visualización
+
+```{r,echo=T,out.width=250,fig.align='center'}
+p
+```
+
+# Explorando conceptos matemáticos - Astróide
+```{r eval=FALSE, include=FALSE}
+knitr::include_graphics("FigurasLatinR2023/astroid_circle.gif")
+```
+```{r echo=FALSE, out.width=80,fig.align='center'}
+knitr::include_graphics("FigurasLatinR2023/astroide_circle.png")
+```
+
+* Curva menos conhecida
+  
+* Equação paramétrica:
+  
+$x=a\cos^3(\theta)$
+    
+$y=a\sin^3(\theta)$
+    
+$\theta\in [0,2\pi]$
+
+
+# Astróide: código R
+
+```{r,echo=TRUE,eval=TRUE}
+    require(ggplot2)
+    n=500
+    t=seq(0,2*pi, length.out = n)
+    a=1
+    x=a*cos(t)^3
+    y=a*sin(t)^3
+    dt=tibble::tibble(x,y)
+    p=ggplot()+coord_fixed()+theme_void();
+    size=0.15
+    p=p+ geom_point(data=dt, aes(x=x, y=y),
+                    color='black',size=size)
+
+```
+
+# Visualización
+
+```{r,echo=F,out.width=250,fig.align='center'}
+p
+```
+# Transformaciones geométricas: Isometría
+
+
+* rotación
+
+girar alrededor de un eje
+
+```{r echo=F, message=FALSE, warning=FALSE,out.width='90%'}
+#Semi círculo (red)
+n=10; raio=1; t=seq(0,pi/2, length.out = n)
+x1 = raio*cos(t); y1 = raio*sin(t); dt1 = data.frame(x=x1, y=y1)
+#Rotação de pi (black)
+xt1=x1*cos(pi)-y1*sin(pi); yt1=x1*sin(pi)+y1*cos(pi)
+dt = data.frame(x=xt1,y=yt1)
+
+
+```
+
+```{r echo=FALSE, fig.height=1, fig.width=1, fig.align='center',message=FALSE, warning=FALSE}
+#Passo 2: Construindo a curva 
+require(ggplot2) #carregando o pacote
+p = ggplot()+ coord_fixed()+ theme_void()
+p=
+  p+
+   geom_point(data=dt, aes(x=x, y=y), color='black')+geom_point(data=dt1, aes(x=x, y=y), color='red')
+p
+```
+
+# Transformaciones geométricas: Isometría
+
+* traslación
+
+cambiar la posición del objeto
+
+```{r echo=F, message=FALSE, warning=FALSE,out.width='90%'}
+#Semi círculo (red)
+n=10; raio=1; t=seq(0,pi, length.out = n)
+x1 = raio*cos(t); y1 = raio*sin(t); dt1 = data.frame(x=x1, y=y1)
+#Translação no eixo x (black)
+x=x1-3; y=y1; dtx = data.frame(x,y)
+#Translação no eixo y (blue)
+x=x1; y=y1-2; dty = data.frame(x,y)
+#Translação no eixo x e y (green)
+x=x1-3; y=y1-2; dtxy = data.frame(x,y)
+
+```
+
+```{r echo=FALSE, fig.height=1, fig.width=1, fig.align='center',message=FALSE, warning=FALSE}
+#Passo 2: Construindo a curva 
+require(ggplot2) #carregando o pacote
+p = ggplot()+ coord_fixed()+ theme_void()
+p=
+  p+
+   geom_point(data=dtx, aes(x=x, y=y), color='black')+geom_point(data=dty, aes(x=x, y=y), color='blue')+geom_point(data=dtxy, aes(x=x, y=y), color='green')+geom_point(data=dt1, aes(x=x, y=y), color='red')
+p
+```
+
+
+```{r,eval=FALSE,echo=FALSE,out.width=290,fig.align='center'}
+knitr::include_graphics(paste(file,"homer-simpson-the-simpsons.gif",sep="/"))
+```
+# Transformaciones geométricas
+
+* Homotecia: disminuir
+
+
+```{r,eval=FALSE, include=FALSE, echo=FALSE,out.width=290,fig.align='center', message=FALSE, warning=FALSE}
+knitr::include_graphics(paste(file,"matrioska-si.gif",sep="/"))
+```
+
+# MandalaR
+
+* Elección de rotación, disminución estandarizada en 3 niveles.
+```{r,echo=T,out.width=250,fig.align='center', message=FALSE, warning=FALSE}
+require(MandalaR)
+mandalar_basic("circle", theta = c(0,2*pi), raio=1, k = 45, n=100)
+```
+
+* cambiando la rotación
+```{r,echo=T,out.width=250,fig.align='center'}
+mandalar_basic("circle", theta = c(0,2*pi), raio=1, k = 90, n=100)
+```
+
+# Coloreando a mano
+
+Desarrolla la atención y la concentración, la motricidad fina, la creatividad y la imaginación, el sentido estético.
+
+* impresión en papel y pintura a mano
+
+inserir exemplos
+
+# Coloreando con R
+
+Desarrolla la capacidad de lógica matemática y programación.
+
+* uso de la lógica de programación
+
+# Historia del Arte
+
+Respetar la diversidad cultural, entendiendo los significados simbólicos y religiosos de cada tradición.
+
+
+# Referências 
+
+\tiny
+
+# Obrigado!
+
+
+* contato: email aqui!
+
+
+ 
