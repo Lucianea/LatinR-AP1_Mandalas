@@ -100,16 +100,17 @@ knitr::include_graphics(paste(file,"culturas_mandalas.png",sep="/"))
 
 Respetar la diversidad cultural, entendiendo los significados simbólicos y religiosos de cada tradición.
 
-La historia del arte es una forma de comprender las diferentes expresiones artísticas que las personas han creado a lo largo del tiempo, reflejando sus identidades, valores, creencias, sentimientos y visiones del mundo.
+La historia del arte es una forma de comprender las diferentes expresiones artísticas que las personas han creado a lo largo del tiempo, reflejando sus identidades, valores, creencias, sentimientos y visiones del mundo. Mira la figura abajo (Livro , ano).
 
 \begin{minipage}{\textwidth}
 
-```{r, echo=FALSE, out.width = '80%'}
+```{r, echo=FALSE, out.width = '60%', fig.caption="Figura mostrando a diversidade cultural. Fonte: (Livro, ano)"}
 
 knitr::include_graphics("FigurasLatinR2023/respeito_monica_cebolinha.png")
 
 ```
 
+\footnotesize{Fonte: (Livro, ano)}
 \end{minipage}
 
 
