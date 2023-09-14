@@ -100,7 +100,7 @@ knitr::include_graphics(paste(file,"culturas_mandalas.png",sep="/"))
 
 Respetar la diversidad cultural, entendiendo los significados simbólicos y religiosos de cada tradición.
 
-La historia del arte es una forma de comprender las diferentes expresiones artísticas que las personas han creado a lo largo del tiempo, reflejando sus identidades, valores, creencias, sentimientos y visiones del mundo. Mira la figura abajo (Livro , ano).
+Una forma de comprender las diferentes expresiones artísticas que las personas han creado a lo largo del tiempo, reflejando sus identidades, valores, creencias, sentimientos y visiones del mundo.
 
 \begin{minipage}{\textwidth}
 
@@ -110,7 +110,7 @@ knitr::include_graphics("FigurasLatinR2023/respeito_monica_cebolinha.png")
 
 ```
 
-\footnotesize{Fonte: (Livro, ano)}
+\footnotesize{\tiny{Ilustrar la diversidad cultural. Fonte: (KONDO e SOUSA, 2020.)}}
 \end{minipage}
 
 
@@ -127,6 +127,7 @@ knitr::include_graphics("FigurasLatinR2023/pintura_monica_cebolinha.png")
 
 ```
 
+\footnotesize{\tiny{Ilustrar pintura a mano. Fonte: (COMO APRENDER A DESENHAR, 2021.)}}
 \end{minipage}
 
 # Ejemplos a mano
@@ -148,6 +149,8 @@ knitr::include_graphics("FigurasLatinR2023/mandala_mao2.jpg")
 
 ```
 \end{minipage}
+
+\footnotesize{\tiny{Expresar la creatividad y la coordinación motora. Fonte: (Acervo Próprio, 2022.)}}
 \end{minipage}
 
 # Coloreando con R
@@ -165,6 +168,7 @@ Desarrolla la capacidad de lógica matemática y programación.
 knitr::include_graphics("FigurasLatinR2023/computador_monica_cebolinha.png")
 
 ```
+\footnotesize{\tiny{Ilustrar programación. Fonte: (COMO APRENDER A DESENHAR, 2021.)}}
 
 \end{minipage}
 
@@ -264,15 +268,21 @@ p
 
 girar alrededor de un eje: los puntos negros se vuelven rojos
 
-```{r echo=F, message=FALSE, warning=FALSE,out.width='90%'}
+\begin{minipage}{\textwidth}
+\begin{minipage}{0.5\textwidth}
+
+```{r, echo=FALSE,out.width=100,fig.align='center', message=FALSE, warning=FALSE}
+knitr::include_graphics("FigurasLatinR2023/matruska_rotacao.jpeg")
+```
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+```{r echo=F, message=FALSE, warning=FALSE,out.width='40%'}
 #Semi círculo (red)
 n=10; raio=1; t=seq(0,pi/2, length.out = n)
 x1 = raio*cos(t); y1 = raio*sin(t); dt1 = data.frame(x=x1, y=y1)
 #Rotação de pi (black)
 xt1=x1*cos(pi)-y1*sin(pi); yt1=x1*sin(pi)+y1*cos(pi)
 dt = data.frame(x=xt1,y=yt1)
-
-
 ```
 
 ```{r echo=FALSE, fig.height=1, fig.width=1, fig.align='center',message=FALSE, warning=FALSE}
@@ -284,13 +294,21 @@ p=
    geom_point(data=dt, aes(x=x, y=y), color='black')+geom_point(data=dt1, aes(x=x, y=y), color='red')
 p
 ```
-
+\end{minipage}
+\end{minipage}
 # Transformaciones geométricas: Isometría
 
 * traslación
 
 cambiar la posición del objeto: los puntos negros se traducen en verde, rojo y azul
+\begin{minipage}{\textwidth}
+\begin{minipage}{0.5\textwidth}
 
+```{r, echo=FALSE,out.width=100,fig.align='center', message=FALSE, warning=FALSE}
+knitr::include_graphics("FigurasLatinR2023/matruska_translacao.jpeg")
+```
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
 ```{r echo=F, message=FALSE, warning=FALSE,out.width='90%'}
 #Semi círculo (red)
 n=10; raio=1; t=seq(0,pi, length.out = n)
@@ -313,6 +331,8 @@ p=
    geom_point(data=dtx, aes(x=x, y=y), color='black')+geom_point(data=dty, aes(x=x, y=y), color='blue')+geom_point(data=dtxy, aes(x=x, y=y), color='green')+geom_point(data=dt1, aes(x=x, y=y), color='red')
 p
 ```
+\end{minipage}
+\end{minipage}
 
 # Transformaciones geométricas
 
@@ -544,7 +564,7 @@ MandalaR::mandalar_basic("elipse", theta = c(0,2*pi), a=1, b=2, k = 40, n=250)
 
 # Aplicativo shiny
 
-* Precursor del paquete MandalaR
+* Precursor del paquete MandalaR: <https://lucianealcoforado.shinyapps.io/Mandala/>
 
 * Permite generar mandalas sin esfuerzo de programación
 
@@ -565,17 +585,20 @@ MandalaR::mandalar_basic("elipse", theta = c(0,2*pi), a=1, b=2, k = 40, n=250)
 
 
 # Referências 
-
-ALCOFORADO, L.F. et al. Mandalas, curvas clássicas e visualização com R. Universidade de São Paulo. Faculdade de Zootecnia e Engenharia de Alimentos, 2023. DOI: <https://doi.org/10.11606/9786587023335> Disponível em: <https://www.livrosabertos.sibi.usp.br/portaldelivrosUSP/catalog/book/1017> . Acesso em 12 setembro. 2023.
+\tiny{ALCOFORADO, L.F. et al. Mandalas, curvas clássicas e visualização com R. Universidade de São Paulo. Faculdade de Zootecnia e Engenharia de Alimentos, 2023. DOI: <https://doi.org/10.11606/9786587023335> Disponível em: <https://www.livrosabertos.sibi.usp.br/portaldelivrosUSP/catalog/book/1017> . Acesso em 12 setembro. 2023.
 
 ALCOFORADO, L.F. MandalaR: Building Mandalas from Parametric Equations of Classical Curves. R package version 0.1.0, 2022. <https://CRAN.R-project.org/package=MandalaR>.
+
+COMO APRENDER A DESENHAR. Turma da Mônica para colorir e imprimir (MUITO FÁCIL). Como Aprender a Desenhar, 2021. Disponível em: <https://www.comoaprenderdesenhar.com.br/turma-da-monica-para-colorir-e-imprimir-muito-facil>. Acesso em: 14 set. 2023.
+
+KONDO, André; SOUSA, Mauricio de. Turma da Mônica: lendas japonesas. São Paulo: JBC, 2020.}
 
 
 
 # Obrigado!
 
 
-* contato: lucianea@id.uff.br; jpmdossantos@yahoo.com
+* contato: lucianea@id.uff.br; jpmdossantos@yahoo.com.br
 
 
  
